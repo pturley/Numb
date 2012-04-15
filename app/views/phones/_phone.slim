@@ -1,0 +1,5 @@
+= phone.id
+= phone.make
+= phone.has_gps
+= phone.has_internet
+= button_to "Delete Phone", { :action => "destroy", :id => phone.id }, :confirm => "Are you sure?", :method => :delete
