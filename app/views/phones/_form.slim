@@ -1,4 +1,6 @@
 = form_for @phone do |f|
   = f.label :make, "Make"
   = f.text_field :make
+  = f.label :has_internet, "Internet"
+  = f.check_box :has_internet
   = f.submit
