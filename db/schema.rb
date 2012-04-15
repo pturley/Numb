@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120415154828) do
+ActiveRecord::Schema.define(:version => 20120415160238) do
+
+  create_table "phone_numbers", :force => true do |t|
+    t.float    "number"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "phones", :force => true do |t|
     t.boolean  "has_internet"
