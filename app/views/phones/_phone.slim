@@ -1,6 +1,11 @@
 .well class="phone"
 	= phone.id
-	= phone.make
+	h1	
+		= phone.make
+	h3 Internet 
 	= phone.has_gps
+	h3 GPS
 	= phone.has_internet
-	= button_to "Delete Phone", { :action => "destroy", :id => phone.id }, :confirm => "Are you sure?", :method => :delete, :class => "btn primary"
+
+	= button_to "Edit Phone", { :action => "edit", :id => phone.id }, :method => :get, :class => "btn"
+	= button_to "Delete Phone", { :action => "destroy", :id => phone.id }, :confirm => "Are you sure?", :method => :delete, :class => "btn btn-danger"
