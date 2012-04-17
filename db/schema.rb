@@ -13,11 +13,15 @@
 
 ActiveRecord::Schema.define(:version => 20120417181050) do
 
+  create_table "people", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "phone_numbers", :force => true do |t|
     t.float    "number"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "phone_id"
   end
 
   create_table "phones", :force => true do |t|

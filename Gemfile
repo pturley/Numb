@@ -3,10 +3,11 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'jquery-rails'
 gem 'devise', '2.0.4'
-
+gem "heroku"
 
 group :production do
   gem 'pg'
+  gem 'slim', '~> 1.2.0'
 end
 
 
