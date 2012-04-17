@@ -1,13 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
-gem 'sqlite3'
 gem 'jquery-rails'
 gem 'devise', '2.0.4'
 
 
 group :production do
-  gem 'activerecord-postgresql-adapter'
+  gem 'pg'
 end
 
 
@@ -23,4 +22,5 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.9.0'
+  gem 'sqlite3'
 end
