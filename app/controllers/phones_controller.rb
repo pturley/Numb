@@ -1,4 +1,5 @@
 class PhonesController < ApplicationController
+  before_filter :authenticate_user!
 
   def index
     @phones = Phone.all

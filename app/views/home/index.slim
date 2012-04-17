@@ -1,0 +1,7 @@
+- if user_signed_in?
+  = button_to "Log Off", "/users/sign_out", :confirm => "Are you sure?", :method => :delete, :class => "btn btn-danger"
+- else
+  .signUp
+    = link_to "Sign Up", new_user_registration_path
+  .signIn
+    = link_to "Sign In", new_user_session_path

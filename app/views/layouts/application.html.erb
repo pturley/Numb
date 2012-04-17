@@ -20,10 +20,16 @@
 	      </a>
 	 
 	      <!-- Be sure to leave the brand out there if you want it shown -->
-	      <a class="brand" href="#">Numb </a> <span style="vertical-align:middle">Managing phones and numbers</span>
+	      <a class="brand" href="/">Numb </a> <span style="vertical-align:middle">Managing phones and numbers</span>
     	</div>
     </div>
 </div>
+  <% if notice %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert"><%= alert %><a class="close" data-dismiss="alert" href="#">&times;</a></p>
+  <% end %>
 	<%= yield %>
 
 </body>

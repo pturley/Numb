@@ -34,4 +34,7 @@ Numb::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  # Default url for devise that may not be necessary for us
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
