@@ -12,6 +12,18 @@
  *= require_tree .
 */
 
-.phone {
+body {
+	background-image: url("background.jpg");
+}
+.viewArea {
 	width:200px;
+}
+.editArea {
+	width:400px;
+}
+.green {
+	color: #5bb75b;
+}
+.red {
+	color: #da4f49;
 }

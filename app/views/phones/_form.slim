@@ -1,9 +1,8 @@
-.well
-	= form_for @phone, :html => {:class => "form-horizontal"} do |f| 
-	  = f.label :make, "Make"
-	  = f.text_field :make
-	  = f.label :has_gps, "GPS"
-	  = f.check_box :has_gps
-	  = f.label :has_internet, "Internet"
-	  = f.check_box :has_internet
-	  = f.submit :class => "btn btn-primary"
+= form_for @phone, :html => {:class => "form-horizontal"} do |f| 
+  = f.label :make, "Make"
+  = f.text_field :make
+  = f.label :has_gps, "GPS"
+  = f.check_box :has_gps
+  = f.label :has_internet, "Internet"
+  = f.check_box :has_internet
+  = f.submit :class => "btn btn-primary"
