@@ -1,10 +1,5 @@
 = form_for @phone_number, :html => {:class => "form-vertical"}  do |f|
-  - if @phone_number.errors.any?
-    .alert.alert-error
-      ul
-        - @phone_number.errors.full_messages.each do |message|
-          li
-            = message
+  = print_errors @phone_number
   = f.label :number, "Number"
   = f.text_field :number
   = f.label :is_assigned, "Is number assigned?" 
