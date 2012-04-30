@@ -24,4 +24,5 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 2.9.0'
   gem 'sqlite3'
+  gem 'shoulda-matchers'
 end

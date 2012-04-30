@@ -14,14 +14,18 @@
 ActiveRecord::Schema.define(:version => 20120421091449) do
 
   create_table "people", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "name"
+    t.boolean  "is_permanent"
+    t.boolean  "is_active"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "phone_numbers", :force => true do |t|
     t.string   "number"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "phone_id"
     t.boolean  "is_assigned"
   end
 
