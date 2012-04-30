@@ -1,2 +1,3 @@
-- @phones.each do |phone|
-  = render :partial => "phone", :locals => {:phone => phone}
+- if @phones
+  - @phones.each do |phone|
+    = render :partial => "phone", :locals => {:phone => phone}
