@@ -11,13 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120430191915) do
+ActiveRecord::Schema.define(:version => 20120430193128) do
 
   create_table "phone_numbers", :force => true do |t|
     t.string   "number"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.integer  "phone_id"
     t.boolean  "is_assigned"
   end
 
@@ -25,8 +24,9 @@ ActiveRecord::Schema.define(:version => 20120430191915) do
     t.boolean  "has_internet"
     t.boolean  "has_gps"
     t.string   "make"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "phone_number_id"
   end
 
   create_table "users", :force => true do |t|
