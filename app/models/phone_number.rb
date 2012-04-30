@@ -1,6 +1,6 @@
 class PhoneNumber < ActiveRecord::Base
-  validates_uniqueness_of :number
-  attr_accessible :number
-  attr_accessible :is_assigned
+  validates_presence_of :number, :simcard_number
+  validates_uniqueness_of :number, :simcard_number
+  attr_accessible :number, :is_assigned, :simcard_number
   has_one :phone
 end

@@ -1,10 +1,16 @@
 = form_for @phone_number, :html => {:class => "form-vertical"}  do |f|
-	= f.label :number, "Number"
-	= f.text_field :number
-	= f.label :is_assigned, "Is number assigned?"	
-	= f.check_box :is_assigned
-	.form-actions
-   			= f.submit :class => "btn btn-primary"
-   			= button_to "View all numbers", { :action => "", }, :method => :get, :class => "btn"
-
- 
+  - if @phone_number.errors.any?
+    .alert.alert-error
+      ul
+        - @phone_number.errors.full_messages.each do |message|
+          li
+            = message
+  = f.label :number, "Number"
+  = f.text_field :number
+  = f.label :is_assigned, "Is number assigned?" 
+  = f.check_box :is_assigned
+  = f.label :simcard_number, "Simcard Number"
+  = f.text_field :simcard_number
+  .form-actions
+        = f.submit :class => "btn btn-primary"
+        = button_to "View all numbers", { :action => "", }, :method => :get, :class => "btn"

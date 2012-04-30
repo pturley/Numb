@@ -1,12 +1,15 @@
 .viewArea
 	.well 
 		h2
+			|	Number: &nbsp
 			= phone_number.number
-		- if phone_number.is_assigned
-			h3
+		h3
+			- if phone_number.is_assigned
 				.red Assigned
-		- else
-			h3 
+			- else
 				.green Avaliable
+		h3
+			|	Simcard Number: &nbsp
+			= phone_number.simcard_number
 		= button_to "Edit Number", { :action => "edit", :id => phone_number.id }, :method => :get, :class => "btn"
 		= button_to "Delete Number", { :action => "destroy", :id => phone_number.id }, :confirm => "Are you sure?", :method => :delete, :class => "btn btn-danger"

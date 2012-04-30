@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120430193128) do
+ActiveRecord::Schema.define(:version => 20120430194823) do
 
   create_table "phone_numbers", :force => true do |t|
     t.string   "number"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
     t.boolean  "is_assigned"
+    t.string   "simcard_number"
   end
 
   create_table "phones", :force => true do |t|
