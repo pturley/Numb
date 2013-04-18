@@ -1,8 +1,9 @@
 class PhoneNumbersController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :load_phone_numbers
+  before_filter :load_phone_number
 
   def index
-    @phone_numbers = PhoneNumber.all
   end
 
   def new
@@ -19,11 +20,9 @@ class PhoneNumbersController < ApplicationController
   end
 
   def edit
-    @phone_number = PhoneNumber.find params[:id]
   end
 
   def update
-    @phone_number = PhoneNumber.find params[:id]
     if @phone_number.update_attributes params[:phone_number]
       redirect_to phone_numbers_path
     else
@@ -32,12 +31,19 @@ class PhoneNumbersController < ApplicationController
   end
 
   def destroy
-    @phone_number = PhoneNumber.find params[:id]
     @phone_number.destroy
     redirect_to phone_numbers_path
   end
 
   def show
+  end
+
+  private
+  def load_phone_numbers
+    @phone_numbers = PhoneNumber.all
+  end
+
+  def load_phone_number
     @phone_number = PhoneNumber.find params[:id]
   end
 end
